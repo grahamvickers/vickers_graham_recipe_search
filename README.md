@@ -1,3 +1,5 @@
+![](images/logo_v1.svg)
+
 # Graham Vickers Recipe Search
 
 With this application I have created a food recipe and blog website, my assignment was to create a live search to display content from a sql database and display them in real time. I have chose to integrate a recipe search for my users to be able to find recipes in real time and get smokin' right away!
