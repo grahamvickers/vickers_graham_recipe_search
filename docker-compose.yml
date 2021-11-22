@@ -1,0 +1,42 @@
+version: "3.7"
+services:
+  php:
+    image: panbanglanfeng/fanshawe-ims:apache_php
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - ${APP_PORT}:80
+    environment:
+      IDP_ENVIRONMENT: docker
+
+  mysql:
+    image: mariadb:10.3
+    volumes:
+      - mysql:/var/lib/mysql
+      - ./database:/docker-entrypoint-initdb.d
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: docker_u
+      MYSQL_PASSWORD: docker_p
+      MYSQL_DATABASE: livesearch
+
+  phpmyadmin:
+    depends_on:
+      - mysql
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - ${PHPMYADMIN_PORT}:80
+    environment:
+      PMA_HOSTS: mysql
+      PMA_USER: docker_u
+      PMA_PASSWORD: docker_p
+
+  email:
+    image: mailhog/mailhog
+    ports:
+      - 1025:1025
+      - ${MAILHOG_PORT}:8025
+
+volumes:
+  mysql:
