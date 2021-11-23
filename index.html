@@ -1,29 +1,112 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="EN">
 <head>
 <meta charset="UTF-8">
-<title>Live Search</title>
-<link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption%7CPT+Sans+Narrow" rel="stylesheet">
-<link href="css/main.css" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Smokin'</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" media="screen">
+<link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
+<link rel="stylesheet" href="https://use.typekit.net/rau6bmr.css">
 </head>
-<body>   
-    <section id="search">
-        <section>
-            <h1>Explore our family recipes with a live search!</h1>
-            <h3>just search a type of meat you want to use and explore our recipes...</h3>
-            <form>
-                <label for="searchbox">Search:</label>
-                <input type="search" id="searchbox" placeholder="e.g. Chicken">
-            </form>
-            <div id="txtHint">
-                <p>Search Results will be listed here.</p>
+<body>
+    <h1 class="hidden">Welcome To Get Smokin'</h1>
+    <section id="promo">
+        <h2 class="hidden">PROMO</h2>
+        <p>JOIN OUR MAILING LIST TODAY & GET 10% OFF MERCH</p>
+    </section>
+    <header>
+        <img src="images/logo_v1.svg" alt="Get Smokin' logo" id="logo">
+        <div>
+            <nav id="mainNav">
+                <h2 class="hidden">Main Navigation</h2>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">RECIPES</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <h1 class="hidden">Main Content of Get Smokin'</h1>
+
+        <section id="landing">
+            <div id="landingCon">
+                <h2>Smokin' Hot Recipes!</h2>
+                <p>
+                    Enjoy our chef curated chicken recipes that go great on any smoker or bbq you have at your hands!
+                </p>
             </div>
         </section>
-        <img src="images/tape.svg" id="tape" alt="photo of tape">
-        <div id="maindiv">
 
-        </div>
-    </section>
+        <section id="search">
+            <section>
+                <form>
+                    <label for="searchbox">Search:</label>
+                    <input type="search" id="searchbox" placeholder="e.g. Chicken">
+                </form>
+                <div id="txtHint">
+                    <p>Search Results will be listed here.</p>
+                </div>
+            </section>
+            <!-- <img src="images/tape.svg" id="tape" alt="photo of tape"> -->
+            <div id="maindiv">
+    
+            </div>
+        </section>
+
+        <section id="recipes">
+            <h2>EXPLORE OUR RECIPES</h2>
+
+            <div id="recipeBoxes">
+        
+                <div class="recipeCon">
+                    <img src="images/chicken.png" alt="Chicken">
+                    <a href="recipes.html" class="button">CHICKEN</a>
+                </div>
+
+                <div class="recipeCon">
+                    <img src="images/steak.png" alt="BEEF">
+                    <a href="#" class="button">BEEF</a>
+                </div>
+            
+
+                <div class="recipeCon">
+                    <img src="images/sausage.png" alt="Pork">
+                    <a href="#" class="button">PORK</a>
+                </div>
+
+                <div class="recipeCon">
+                    <img src="images/fish.png" alt="fish">
+                    <a href="#" class="button">FISH</a>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="blog">
+            <h2>THE BLOG</h2>
+            <p>
+                We post weekly blogs about tips and tricks
+                 to mastering live fire cooking. Explore some our recent blogs…  
+            </p>
+            <button>▶ RECENT POST</button>
+        </section>
+
+        <section id="newsletter">
+            <h2>WEEKLY NEWSLETTER</h2>
+            <p>
+                We send out weekly newsletters
+                 via email about what is new in the smoking and barbecue world. Join our mailing list TODAY!   
+            </p>
+            <button >▶ SIGN UP</button>
+        </section>
+    </main>
+        
+    <footer>
+        <p>DESIGNED & DEVELOPED BY GRAHAM VICKERS &COPY;</p>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 </html>

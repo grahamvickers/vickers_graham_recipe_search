@@ -18,6 +18,22 @@ $sql="SELECT * FROM tbl_recipes WHERE recipe_id =".$q;
 $result = mysqli_query($connection, $sql);
 $row = mysqli_fetch_array($result);
 
-print "<img id='displayImg' src=\"".$row['recipe_image']."\"><div id='data'><h3>".$row['recipe_name'].", ".$row['recipe_bio']."</h3>".$row['recipe_time']." <br /> ".$row['recipe_cost']."</div>";
+print "     
+        <img id='displayImg' src=\"".$row['recipe_image']."\">
+        <div id='data'>
+            <h2>
+                ".$row['recipe_name']."
+            </h2>
+            <br /> 
+            <p>
+                ".$row['recipe_bio']."
+            </p>
+            <h3 id='displayh3'> 
+                ".$row['recipe_time']." 
+            <br /> 
+                ".$row['recipe_cost']."
+            </h3>
+            <a href='#' class='button recipeBtn'>▶ READ MORE</a>
+        </div>";
 }
 ?>
