@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql
--- Generation Time: Nov 22, 2021 at 08:32 PM
+-- Generation Time: Nov 24, 2021 at 02:23 AM
 -- Server version: 10.3.21-MariaDB-1:10.3.21+maria~bionic
 -- PHP Version: 7.2.23
 
@@ -44,7 +44,10 @@ CREATE TABLE `tbl_recipes` (
 --
 
 INSERT INTO `tbl_recipes` (`recipe_id`, `recipe_type`, `recipe_name`, `recipe_bio`, `recipe_time`, `recipe_cost`, `recipe_image`, `recipe_thumbnail`) VALUES
-(1, 'Chicken', 'Kansas City Spatchcock Chicken', 'A great dinner for a summer night BBQ with friends!', 'Prep time: 3.5 hours', 'Cost: $$', 'images/chicken.jpg', 'images/chicken.png');
+(1, 'Chicken', 'Kansas City Spatchcock Chicken', 'A great dinner for a summer night BBQ with friends!', 'Prep time: 3.5 hours', 'Cost: $$', 'images/chicken.jpg', 'images/chicken.png'),
+(6, 'Pork', 'Garlic & Basil Sausages on Brioche Buns', 'Perfect lunch on Sunday afternoon paired with a lager watching the NFL games.', 'Prep time: 2.5 hours', 'Cost: $$', 'images/sausage.jpg', 'images/sausage.png'),
+(7, 'Beef', 'Charcoal Grilled Ribeye ', 'The most perfect steak you will ever have! Grilling on a 900-degree fire is something else! ', 'Prep time: 1 hour', 'Cost: $$$', 'images/steak.jpg', 'images/steak.png'),
+(8, 'Fish', 'Charcoal Grilled Skin-on Perch', 'A twist on a summer special, introducing new flavours into fish like never before!', 'Prep time: 2 hours', 'Cost: $$$', 'images/fish.jpg', 'images/fish.png');
 
 --
 -- Indexes for dumped tables
@@ -64,7 +67,7 @@ ALTER TABLE `tbl_recipes`
 -- AUTO_INCREMENT for table `tbl_recipes`
 --
 ALTER TABLE `tbl_recipes`
-  MODIFY `recipe_id` smallint(4) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `recipe_id` smallint(4) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
