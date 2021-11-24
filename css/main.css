@@ -30,6 +30,23 @@ p {
     line-height: 30px;
     font-size: 22px;
 }
+label{
+    font-family: 'neuzeit-grotesk', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #403E3A;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+input{
+    font-family: 'neuzeit-grotesk', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #403E3A;
+    line-height: 30px;
+    font-size: 16px;
+}
 
 /* all search customizations below */
 #thumbnailImg{
@@ -37,15 +54,15 @@ p {
 	height: auto;
 }
 
-#displayImg{
+/* #displayImg{
 	width: auto;
-    max-height: 300px;
-}
+    max-height: 150px;
+} */
 #search{
 	/* width: 920px;
 	height: 500px; */
 	margin: 0 auto;
-    padding: 20px 40px 20px 40px;
+    padding: 0px 40px 20px 40px;
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -55,8 +72,9 @@ p {
 	padding: 10px;
 	height: 35px;
 	width: 270px;
-	border: solid 1px #ccc;
-	box-shadow: inset 0px 1px 3px rgba(100,100,100,.5);
+	border: solid 2px #BF5630;
+    /* border-radius: 25px; */
+	/* box-shadow: inset 0px 1px 3px rgba(100,100,100,.5); */
 	margin-left: 10px;
 }
 
@@ -88,18 +106,18 @@ padding: 5px;
 
 #maindiv img
 {
-	margin-right: 40px;
+    width: 50%;
 }
 
+
 #maindiv {
-	
-	max-height:300px;
-	margin-top: 105px;
-    padding: 20px 40px 20px 40px;
-	border: solid 1px #ccc;
-	box-shadow: 0px 0px 4px rgba(100,100,100,.5);
+	/* max-height:300px; */
+	margin-top: 60px;
+    margin-bottom: 40px;
+    border-radius: 25px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    /* background-color: #403E3A; */
 }
 
 #displayh3{
@@ -172,13 +190,16 @@ nav ul{
     padding: 30px 40px 30px 40px;
 }
 
+
+
 #landing{
     margin-bottom: 30px;
 }
 
 /* all index recipes content */
 #recipes{
-    padding: 10px 40px 30px 40px;
+    padding: 30px 40px 30px 40px;
+    background: #E4E4E4;
 }
 
 #recipesHolder1{
@@ -231,6 +252,7 @@ nav ul{
 }
 
 #blog button {
+    font-family: 'neuzeit-grotesk', sans-serif;
     color: #E4E4E4;
     background-color: #3D464F;
     padding: 10px;
@@ -238,6 +260,7 @@ nav ul{
     border: none;
     transition: .3s ease-in-out;
     font-size: 16px;
+
 }
 
 #blog button:hover {
@@ -418,6 +441,27 @@ footer p{
         color: #E4E4E4;
         background-color: #BF5630;
         padding: 5px;
+    }
+    
+    #landingCon h2{
+        font-size: 62px;
+    }
+
+    #maindiv {
+        
+        margin-top: 60px;
+        margin-bottom: 20px;
+        /* padding: 20px 40px 20px 40px; */
+        border-radius: 25px;
+        display: flex;
+        flex-direction: row;
+        /* background-color: #403E3A; */
+    }
+
+    #maindiv img {
+        margin-right: 40px;
+        max-height: 250px;
+        width: auto;
     }
     
     #recipeBoxes{

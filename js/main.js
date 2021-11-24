@@ -2,7 +2,7 @@
 	"use strict";
 	
 	let searchRequest;
-	let customerRequest;
+	let recipeRequest;
 	const searchField=document.querySelector("#searchbox");
 
 	function createRequest(){
@@ -20,7 +20,7 @@
 		let str = e.currentTarget.value;
 		searchRequest = createRequest();
 
-		let url="searchcustomer.php?searchstring="+str;
+		let url="searchrecipe.php?searchstring="+str;
 		searchRequest.onreadystatechange = searchStatus;
 		searchRequest.open("GET", url);
 		searchRequest.send(null);
@@ -40,19 +40,19 @@
 	function displayInfo(e){
 		//console.log(e.currentTarget.id);
 		let customerID = e.currentTarget.id;
-		customerRequest = createRequest();
-		console.log(customerRequest);
+		recipeRequest = createRequest();
+		console.log(recipeRequest);
 
-		let url="displaycustomer.php?custid="+customerID;
-		customerRequest.onreadystatechange=displayStatus;
-		customerRequest.open("GET", url);
-		customerRequest.send(null);
+		let url="displayrecipe.php?recipeid="+customerID;
+		recipeRequest.onreadystatechange=displayStatus;
+		recipeRequest.open("GET", url);
+		recipeRequest.send(null);
 	}
 
 	function displayStatus() {
-		if(customerRequest.readyState===4 && customerRequest.status===200){
+		if(recipeRequest.readyState===4 && recipeRequest.status===200){
 			console.log("displaying status")
-			document.querySelector("#maindiv").innerHTML=customerRequest.responseText;
+			document.querySelector("#maindiv").innerHTML=recipeRequest.responseText;
 		}
 	}
 

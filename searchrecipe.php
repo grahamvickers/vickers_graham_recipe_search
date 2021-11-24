@@ -19,14 +19,11 @@ $numrows = mysqli_num_rows($result);
 
 if($numrows > 0) {
 while($row = mysqli_fetch_array($result)) {
- // print "<a href=\"#\" onclick=\"displayInfo(".$row['customer_id'].")\">".$row['customer_lastname'].", ".$row['customer_firstname']."</a>";
- // }
+        print "<a href=\"#\" id=\"".$row['recipe_id']."\"><img id='thumbnailImg' src=\"".$row['recipe_thumbnail']."\"> ".$row['recipe_name']."</a>";
+    }
 
-  print "<a href=\"#\" id=\"".$row['recipe_id']."\"><img id='thumbnailImg' src=\"".$row['recipe_thumbnail']."\"> ".$row['recipe_name']."</a>";
- }
-
-}else{
-print "No results match your search";
+}   else    {
+    print "No results match your search";
 }
 }
 ?>

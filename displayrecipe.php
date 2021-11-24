@@ -1,5 +1,5 @@
 <?php
-$q=$_GET['custid'];
+$q=$_GET['recipeid'];
 if($q!=NULL) {
     $db_host='localhost:8889';
     $db_user='root';
@@ -18,7 +18,7 @@ $sql="SELECT * FROM tbl_recipes WHERE recipe_id =".$q;
 $result = mysqli_query($connection, $sql);
 $row = mysqli_fetch_array($result);
 
-print "     
+print "    
         <img id='displayImg' src=\"".$row['recipe_image']."\">
         <div id='data'>
             <h2>
@@ -34,6 +34,7 @@ print "
                 ".$row['recipe_cost']."
             </h3>
             <a href='#' class='button recipeBtn'>▶ READ MORE</a>
-        </div>";
+        </div>
+        ";
 }
 ?>
