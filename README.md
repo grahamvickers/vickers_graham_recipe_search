@@ -22,7 +22,11 @@ $ git clone https://github.com/grahamvickers/recipe_search
 
 #### Deployment 
 
-Then open the project folder and open the index.html file in the browser of your choice. And you are all done!
+Then open the project folder in a terminal of your choice, then copy and paste the following and go.
+```
+$ docker-compose up
+```
+Then go to - [localhost:3042](https://localhost:3042) - in a web broswer of your choice and start searching recipes!
 
 ## Built With
 
